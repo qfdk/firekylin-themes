@@ -5,7 +5,7 @@ const cssCompress = require("stc-css-combine");
 const uglify = require("stc-uglify");
 stc.config({
   include: ["firekylin"],
-  outputPath: 'firekylin.build',
+  outputPath: 'themes',
   product: "speech",
   tpl: {
     engine: "nunjucks",
