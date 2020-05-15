@@ -1,0 +1,14 @@
+{
+  "name": "firekylin-build",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "stc": "^2.0.14",
+    "stc-css-combine": "^1.0.4",
+    "stc-css-compress": "^1.0.1",
+    "stc-html-compress": "^1.0.2",
+    "stc-uglify": "^1.0.8"
+  }
+}
