@@ -1,6 +1,7 @@
 
 @font-face {
   font-family: iconfont;
+  font-display: swap;
   src: url(../font/iconfont.eot);
   src: url(../font/iconfont.eot?#iefix) format("embedded-opentype"),url(../font/iconfont.ttf) format("truetype"),url(../font/iconfont.svg#iconfont) format("svg");
 }
