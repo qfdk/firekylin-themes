@@ -267,7 +267,7 @@
       _this.$body.className = _this.$body.className.replace(body_class_name, '');
       _this.$sidebar_mask.style.display = 'none';
       e.preventDefault();
-    }, false);
+    }, {passive: true});
 
 
     win.addEventListener('resize', function () {
@@ -467,7 +467,4 @@
     hljs.removeMark();
     hljs.mark();
   });
-  document.addEventListener('touchstart', function (e){
-    e.preventDefault();
-  }, {passive: true});
 })(window, document);
