@@ -467,5 +467,7 @@
     hljs.removeMark();
     hljs.mark();
   });
-
+  document.addEventListener('touchstart', function (e){
+    e.preventDefault();
+  }, {passive: true});
 })(window, document);
