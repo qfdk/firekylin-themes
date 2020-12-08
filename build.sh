@@ -1,5 +1,5 @@
 #!/bin/sh
-# 删除临时文件
+# 删除临时文件 本地记得注释掉
 rm -rf output;
 rm -rf firekylin;
 # 复制新主题
