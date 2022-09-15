@@ -6,7 +6,6 @@ rm -rf firekylin;
 cp -r ../www/theme/firekylin .;
 # 产生新主题
 node stc.config.js;
-
 sed -i 's/firekylin/firekylin.build/' output/firekylin/package.json;
 rm -rf mkdir ../www/theme/firekylin.build;
 mkdir ../www/theme/firekylin.build;

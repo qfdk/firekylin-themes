@@ -87,6 +87,10 @@
         loadChangyanComment();
       } else if (dataType === 'gitalk') {
         loadGitalkComment();
+      } else if (dataType === 'waline') {
+        loadWalineComment();
+      } else if (dataType === 'valine') {
+        loadValineComment();
       }
     }
 
@@ -204,6 +208,40 @@
     (doc.head || doc.body).appendChild(s);
   }
 
+  var loadWalineComment = function () {
+    var waline_thread = getById('waline-container');
+    var walineConfig = waline_thread.getAttribute('data-name');
+    if(walineConfig) {
+      walineConfig = JSON.parse(walineConfig);
+    }
+    walineConfig.el = '#waline-container';
+    walineConfig.path = location.pathname;
+
+    var s = document.createElement('script');
+    s.src = '//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js';
+    s.onload = function() {
+      new Waline(walineConfig);
+    };
+    (doc.head || doc.body).appendChild(s);
+  }
+
+  var loadValineComment = function() {
+    var valine_thread = getById('valine-container');
+    var valineConfig = valine_thread.getAttribute('data-name');
+    if(valineConfig) {
+      valineConfig = JSON.parse(valineConfig);
+    }
+    valineConfig.el = '#valine-container';
+    valineConfig.path = location.pathname;
+
+    var s = document.createElement('script');
+    s.src = '//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js';
+    s.onload = function() {
+      new Valine(valineConfig);
+    };
+    (doc.head || doc.body).appendChild(s);
+  }
+
   win.addEventListener('load', function () {
     loadComment();
   });
@@ -267,7 +305,7 @@
       _this.$body.className = _this.$body.className.replace(body_class_name, '');
       _this.$sidebar_mask.style.display = 'none';
       e.preventDefault();
-    }, {passive: true});
+    }, false);
 
 
     win.addEventListener('resize', function () {
@@ -467,4 +505,5 @@
     hljs.removeMark();
     hljs.mark();
   });
+
 })(window, document);

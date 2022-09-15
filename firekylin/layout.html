@@ -16,7 +16,7 @@
   <meta name="description" content="{{options.description}}">{% endif %}
   {%- block headers %}{% endblock -%}
   {% set lscookie = 'lscookie'%}
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/qfdk/firekylin-themes@master/themes/{{options.theme}}/res/css/all.css" type="text/css" data-ls="css_firekylin">
+  <link rel="stylesheet" href="/theme/{{options.theme}}/res/css/all.css" type="text/css" data-ls="css_firekylin">
   {% if themeConfig.sidebarBackground or themeConfig.sidebarBackgroundColor or themeConfig.customCSS or themeConfig.sidebarColor %}
   <style>
     {% if themeConfig.sidebarBackground or themeConfig.sidebarBackgroundColor %}
@@ -119,10 +119,10 @@
       {% endif %}
       <br />
       Powered by&nbsp;<a target="_blank" href="https://thinkjs.org">ThinkJS</a>&nbsp;&amp;&nbsp;<a target="_blank"
-        rel="nofollow" class="external" href="https://firekylin.org">FireKylin {{VERSION}}</a>
+        rel="nofollow" class="external" href="https://firekylin.lithub.cc">FireKylin {{VERSION}}</a>
     </footer>
   </div>
-  <script async src="//cdn.jsdelivr.net/gh/qfdk/firekylin-themes@master/themes/{{options.theme}}/res/js/firekylin.js" data-ls="js_firekylin"></script>
+  <script src="/theme/{{options.theme}}/res/js/firekylin.js" data-ls="js_firekylin"></script>
   {% if options.analyze_code %}
   {{options.analyze_code | safe}}
   {% endif %}
